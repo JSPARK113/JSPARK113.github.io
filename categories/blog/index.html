@@ -124,7 +124,8 @@
         <p class="article-excerpt">
             이전에는 DB에 대한 개념이 없는 상태여서 기본적으로 제공되는 SQlite를 이용했는데 얼마전에 MySQL을 배운 김에 적용해봄.
 이미 MySQL과 RDBMS인 Sequel Pro가 깔려있어서 생각보다 매우 쉽게 성공했다.해보고 나니 완전 신세계!!!!!
-참고 포스트는 [여기](https://dojunblog.wordpress.com/2017/02/20/d
+참고 포스트는 여기
+1. pymysql 설치python 에서 MySQL을 사용할 수 있는 pymysql
         </p>
     </div>
 </article>
@@ -320,7 +321,7 @@ npm WARN deprecated hexo-inject
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2018/02/19/180219/">블로그에 적용하고 싶은 기능들(계속 업데이트, 최종 3/7)</a>
+        <a href="/2018/02/19/180219/">블로그에 적용하고 싶은 기능들(계속 업데이트, 최종 3/22)</a>
         </h1>
     
 
@@ -510,6 +511,24 @@ Django를 이용해서 블로그를 만들 때가 생각나서(…) 어려울 �
 <!-- Custom Scripts -->
 <script src="/js/main.js"></script>
 
-    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
 </body>
 </html>

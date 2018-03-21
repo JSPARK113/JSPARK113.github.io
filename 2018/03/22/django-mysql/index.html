@@ -9,17 +9,17 @@
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="이전에는 DB에 대한 개념이 없는 상태여서 기본적으로 제공되는 SQlite를 이용했는데 얼마전에 MySQL을 배운 김에 적용해봄. 이미 MySQL과 RDBMS인 Sequel Pro가 깔려있어서 생각보다 매우 쉽게 성공했다.해보고 나니 완전 신세계!!!!! 참고 포스트는 [여기](https://dojunblog.wordpress.com/2017/02/20/d">
+    <meta name="description" content="이전에는 DB에 대한 개념이 없는 상태여서 기본적으로 제공되는 SQlite를 이용했는데 얼마전에 MySQL을 배운 김에 적용해봄. 이미 MySQL과 RDBMS인 Sequel Pro가 깔려있어서 생각보다 매우 쉽게 성공했다.해보고 나니 완전 신세계!!!!! 참고 포스트는 여기 1. pymysql 설치python 에서 MySQL을 사용할 수 있는 pymysql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="django에 MySQL 사용하기">
 <meta property="og:url" content="https://jspark113.github.io/2018/03/22/django-mysql/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="이전에는 DB에 대한 개념이 없는 상태여서 기본적으로 제공되는 SQlite를 이용했는데 얼마전에 MySQL을 배운 김에 적용해봄. 이미 MySQL과 RDBMS인 Sequel Pro가 깔려있어서 생각보다 매우 쉽게 성공했다.해보고 나니 완전 신세계!!!!! 참고 포스트는 [여기](https://dojunblog.wordpress.com/2017/02/20/d">
+<meta property="og:description" content="이전에는 DB에 대한 개념이 없는 상태여서 기본적으로 제공되는 SQlite를 이용했는데 얼마전에 MySQL을 배운 김에 적용해봄. 이미 MySQL과 RDBMS인 Sequel Pro가 깔려있어서 생각보다 매우 쉽게 성공했다.해보고 나니 완전 신세계!!!!! 참고 포스트는 여기 1. pymysql 설치python 에서 MySQL을 사용할 수 있는 pymysql">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-03-21T16:21:08.912Z">
+<meta property="og:updated_time" content="2018-03-21T16:24:08.356Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="django에 MySQL 사용하기">
-<meta name="twitter:description" content="이전에는 DB에 대한 개념이 없는 상태여서 기본적으로 제공되는 SQlite를 이용했는데 얼마전에 MySQL을 배운 김에 적용해봄. 이미 MySQL과 RDBMS인 Sequel Pro가 깔려있어서 생각보다 매우 쉽게 성공했다.해보고 나니 완전 신세계!!!!! 참고 포스트는 [여기](https://dojunblog.wordpress.com/2017/02/20/d">
+<meta name="twitter:description" content="이전에는 DB에 대한 개념이 없는 상태여서 기본적으로 제공되는 SQlite를 이용했는데 얼마전에 MySQL을 배운 김에 적용해봄. 이미 MySQL과 RDBMS인 Sequel Pro가 깔려있어서 생각보다 매우 쉽게 성공했다.해보고 나니 완전 신세계!!!!! 참고 포스트는 여기 1. pymysql 설치python 에서 MySQL을 사용할 수 있는 pymysql">
     
 
     
@@ -124,9 +124,10 @@
         <div class="article-entry" itemprop="articleBody">
             <p>이전에는 DB에 대한 개념이 없는 상태여서 기본적으로 제공되는 SQlite를 이용했는데 얼마전에 MySQL을 배운 김에 적용해봄.</p>
 <p>이미 MySQL과 RDBMS인 Sequel Pro가 깔려있어서 생각보다 매우 쉽게 성공했다.<br>해보고 나니 <strong>완전 신세계!!!!!</strong></p>
-<p>참고 포스트는 [여기](<a href="https://dojunblog.wordpress.com/2017/02/20/django%EC%97%90%EC%84%9C-pymysql%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%B4-mysql-%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/" target="_blank" rel="noopener">https://dojunblog.wordpress.com/2017/02/20/django%EC%97%90%EC%84%9C-pymysql%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%B4-mysql-%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/</a></p>
-<h2 id="1-pymysql-설치"><a href="#1-pymysql-설치" class="headerlink" title="1. pymysql 설치"></a>1. pymysql 설치</h2><p><code>pip install pymysql</code></p>
-<h2 id="2-mysql에서-사용할-database-생성"><a href="#2-mysql에서-사용할-database-생성" class="headerlink" title="2. mysql에서 사용할 database 생성"></a>2. mysql에서 사용할 database 생성</h2><p>먼저 mysql에서 django에 사용할 database를 만들어준다.<br>해당 database의 이름이나 내 mysql에 대한 정보는 3번의 django 셋팅시에 사용된다.</p>
+<p>참고 포스트는 <a href="https://dojunblog.wordpress.com/2017/02/20/django%EC%97%90%EC%84%9C-pymysql%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%B4-mysql-%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/" target="_blank" rel="noopener">여기</a></p>
+<h2 id="1-pymysql-설치"><a href="#1-pymysql-설치" class="headerlink" title="1. pymysql 설치"></a>1. pymysql 설치</h2><p>python 에서 MySQL을 사용할 수 있는 pymysql을 설치한다.</p>
+<p><code>pip install pymysql</code></p>
+<h2 id="2-사용할-database-생성"><a href="#2-사용할-database-생성" class="headerlink" title="2. 사용할 database 생성"></a>2. 사용할 database 생성</h2><p>먼저 mysql에서 django에 사용할 database를 만들어준다.<br>해당 database의 이름이나 내 mysql에 대한 정보는 3번의 django 셋팅시에 사용된다.</p>
 <h2 id="3-django의-settings-py-파일-수정"><a href="#3-django의-settings-py-파일-수정" class="headerlink" title="3. django의 settings.py 파일 수정"></a>3. django의 settings.py 파일 수정</h2><p>아래 처럼 settings.py 파일을 바꿔준다.<br>아직 로컬에서만 작업하고 있어서 host는 로컬 ip인 127.0.0.1를 입력했다.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">DATABASES = &#123;</span><br><span class="line">    &apos;default&apos;: &#123;</span><br><span class="line">        &apos;ENGINE&apos;: &apos;django.db.backends.mysql&apos;,</span><br><span class="line">        &apos;NAME&apos;: # DB명. 2번에서 만든 database의 이름을 적는다.</span><br><span class="line">        &apos;USER&apos;: # 내 DB의 계정 user 이름</span><br><span class="line">        &apos;PASSWORD&apos;: # 계정 비밀번호</span><br><span class="line">        &apos;HOST&apos;: # 데이테베이스 주소(IP)</span><br><span class="line">        &apos;PORT&apos;: # 데이터베이스 포트(보통은 3306)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>여기까지 하면 사용완료!!</p>
@@ -138,7 +139,7 @@
 
 
 
-    <a data-url="https://jspark113.github.io/2018/03/22/django-mysql/" data-id="cjf1apax9000cy8v3ork71bev" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://jspark113.github.io/2018/03/22/django-mysql/" data-id="cjf1astpu00051gv3qdj5luay" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -361,6 +362,24 @@
 <!-- Custom Scripts -->
 <script src="/js/main.js"></script>
 
-    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
 </body>
 </html>

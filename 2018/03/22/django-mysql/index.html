@@ -7,16 +7,17 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="" />
+        <meta name="keywords" content="python,mysql,django" />
     
     <meta name="description" content="이전에는 DB에 대한 개념이 없는 상태여서 기본적으로 제공되는 SQlite를 이용했는데 얼마전에 MySQL을 배운 김에 적용해봄. 이미 MySQL과 RDBMS인 Sequel Pro가 깔려있어서 생각보다 매우 쉽게 성공했다.해보고 나니 완전 신세계!!!!! 참고 포스트는 여기 1. pymysql 설치python 에서 MySQL을 사용할 수 있는 pymysql">
+<meta name="keywords" content="python,mysql,django">
 <meta property="og:type" content="article">
 <meta property="og:title" content="django에 MySQL 사용하기">
 <meta property="og:url" content="https://jspark113.github.io/2018/03/22/django-mysql/index.html">
 <meta property="og:site_name">
 <meta property="og:description" content="이전에는 DB에 대한 개념이 없는 상태여서 기본적으로 제공되는 SQlite를 이용했는데 얼마전에 MySQL을 배운 김에 적용해봄. 이미 MySQL과 RDBMS인 Sequel Pro가 깔려있어서 생각보다 매우 쉽게 성공했다.해보고 나니 완전 신세계!!!!! 참고 포스트는 여기 1. pymysql 설치python 에서 MySQL을 사용할 수 있는 pymysql">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-03-21T16:37:47.766Z">
+<meta property="og:updated_time" content="2018-03-21T17:11:42.819Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="django에 MySQL 사용하기">
 <meta name="twitter:description" content="이전에는 DB에 대한 개념이 없는 상태여서 기본적으로 제공되는 SQlite를 이용했는데 얼마전에 MySQL을 배운 김에 적용해봄. 이미 MySQL과 RDBMS인 Sequel Pro가 깔려있어서 생각보다 매우 쉽게 성공했다.해보고 나니 완전 신세계!!!!! 참고 포스트는 여기 1. pymysql 설치python 에서 MySQL을 사용할 수 있는 pymysql">
@@ -67,16 +68,16 @@
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/blog/">blog</a></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/blog/">blog</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/note/">note</a></li></ul>
                                     
                         </ul>
-                        <nav id="sub-nav">
+                        <!-- <nav id="sub-nav"> #검색부분
                             <div id="search-form-wrap">
 
     <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="https://jspark113.github.io"></form>
 
 </div>
-                        </nav>
+                        </nav> -->
                     </div>
                 </div>
             </div>
@@ -91,7 +92,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/blog/">blog</a>
+    <a class="page-title-link" href="/categories/note/">note</a>
     </h1>
 </div>
                         <div class="main-body-content">
@@ -118,6 +119,11 @@
     </div>
 
                 
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/django/">django</a>, <a class="tag-link" href="/tags/mysql/">mysql</a>, <a class="tag-link" href="/tags/python/">python</a>
+    </div>
+
             </div>
         
         
@@ -139,7 +145,7 @@
 
 
 
-    <a data-url="https://jspark113.github.io/2018/03/22/django-mysql/" data-id="cjf1badi000087yv3lapu3vsx" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://jspark113.github.io/2018/03/22/django-mysql/" data-id="cjf1bm2b30004g6v38rjifwwk" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -244,7 +250,7 @@
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/blog/">blog</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/note/">note</a></p>
                             <p class="item-title"><a href="/2018/03/22/django-mysql/" class="title">django에 MySQL 사용하기</a></p>
                             <p class="item-date"><time datetime="2018-03-21T16:00:02.000Z" itemprop="datePublished">2018-03-22</time></p>
                         </div>
@@ -271,7 +277,7 @@
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/blog/">blog</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/note/">note</a></p>
                             <p class="item-title"><a href="/2018/03/20/180222/" class="title">블로그에서 수식 사용하기 (hexo-math)</a></p>
                             <p class="item-date"><time datetime="2018-03-20T08:31:09.000Z" itemprop="datePublished">2018-03-20</time></p>
                         </div>
@@ -295,7 +301,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">8</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/note/">note</a><span class="category-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -312,9 +318,23 @@
 
             
                 
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/django/">django</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mathjax/">mathjax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
 
             
                 
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/django/" style="font-size: 10px;">django</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/mathjax/" style="font-size: 10px;">mathjax</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/python/" style="font-size: 10px;">python</a>
+        </div>
+    </div>
+
 
             
         
@@ -355,6 +375,11 @@
     
         <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
     
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     
 
 

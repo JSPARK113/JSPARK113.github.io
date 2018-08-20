@@ -30,7 +30,7 @@
 <meta property="og:site_name">
 <meta property="og:description" content="파이썬 모듈에서 __all__은 외부에서 해당 모듈에 대해 import *를 실행 할 때 export 될 것들을 의미한다.  string을 element로 가지는 list다. 모듈의 변수, 함수 모두 export 하는 것이 가능하다. __all__에 지정되지 않은 것들은 *을 해도 외부에서 import되지 않는다. import &amp;lt;함수 이름&amp;gt;을 하">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-08-20T07:28:21.976Z">
+<meta property="og:updated_time" content="2018-08-20T07:33:39.457Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python 모듈에서 __all__의 쓰임">
 <meta name="twitter:description" content="파이썬 모듈에서 __all__은 외부에서 해당 모듈에 대해 import *를 실행 할 때 export 될 것들을 의미한다.  string을 element로 가지는 list다. 모듈의 변수, 함수 모두 export 하는 것이 가능하다. __all__에 지정되지 않은 것들은 *을 해도 외부에서 import되지 않는다. import &amp;lt;함수 이름&amp;gt;을 하">
@@ -148,14 +148,20 @@
 <li><code>__all__</code>에 지정되지 않은 것들은 <code>*</code>을 해도 외부에서 import되지 않는다.</li>
 <li><code>import &lt;함수 이름&gt;</code>을 하면 <code>__all__</code>에 써주지 않아도 부를 수 있다. <code>__all__</code>은 <code>import *</code>에만 영향을 준다.</li>
 </ul>
-
+<ul>
+<li>예시: <code>test.py</code> 파일<ul>
+<li>아래 모듈에 대해 <code>from test import *</code>을 실행하면 function1과 function2만 import 돼서 사용할 수 있다. function3은 import 되지 않기 때문에 사용할 수 없다.    </li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">__all__ = [&quot;function1&quot;, &quot;function2&quot;]</span><br><span class="line"></span><br><span class="line">def function1():</span><br><span class="line">    print(&quot;함수1&quot;)</span><br><span class="line"></span><br><span class="line">def function2():</span><br><span class="line">    print(&quot;함수2&quot;)</span><br><span class="line"></span><br><span class="line">def function3():</span><br><span class="line">    print(&quot;함수3&quot;)</span><br></pre></td></tr></table></figure>
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="https://jspark113.github.io/2018/08/20/python-module-all/" data-id="cjl1ylg8h000qdnvoixmms9u2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://jspark113.github.io/2018/08/20/python-module-all/" data-id="cjl1yrxfd000sgmvouwc8d1xt" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
